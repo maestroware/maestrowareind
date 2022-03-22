@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <title>Maestroware Ind. | CEO Page</title>
+    <style>
+        .doneornot {
+            position: relative;
+            width: 60px;
+            height: 20px;
+            -webkit-appearance: none;
+            background: linear-gradient(0deg, rgb(83, 31, 31), #f00);
+            outline: none;
+            border-radius: 20px;
+            box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e, inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .doneornot::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 40px;
+            height: 20px;
+            background: linear-gradient(0deg, #000, #6b6b6b);
+            border-radius: 20px;
+            margin-top: -1px;
+            box-shadow: 0 0 0 1px #232323;
+            transform: scale(.98, .96);
+            transition: 0.5s;
+        }
+
+        .doneornot:checked {
+            background: linear-gradient(0deg, #6dff8d, #20ff2b);
+        }
+
+        .doneornot:checked::before {
+            left: 20px;
+        }
+
+        .doneornot::after {
+            content: '';
+            position: absolute;
+            top: calc(50% - 2px);
+            left: 30px;
+            width: 2px;
+            height: 2px;
+            background: linear-gradient(0deg, #994848, #f00);
+            box-shadow: 0 0 5px #f00, 0 0 15px #f00;
+            border-radius: 50%;
+            transition: .5s;
+        }
+
+        .doneornot:checked::after {
+            background: #63ff70;
+            left: 50px;
+            box-shadow: 0 0 5px #13ff13, 0 0 15px #13ff13;
+        }
+        ul.s{
+            margin-right: 600px;
+        }
+    </style>
+</head>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+<body background="https://wallpaperaccess.com/full/210891.jpg">
+    <header>
+        <ul>
+            <li class="btn"><a class="special" href="index.html">Home</a></li>
+            <li class="btn"><a class="special" href="about.html">About</a></li>
+            <li class="btn"><a class="special" href="join.html">Join</a></li>
+            <li class="btn"><a class="special" href="projects.html">Projects</a></li>
+            <li class="btnl"><button onclick="logout1()" class="btn btn-danger">Log Out</button></li>
+
+        </ul>
+        <div class="logo">
+            <img src="m-removebg-preview.png">
+        </div>
+    </header>
+    <center>
+        <h1>Welcome, CEO Arjun Maheshwari</h1>
+        <h3>To-do List</h3>
+        <div class="tdl">
+            <ul class="s">
+                <li>Maestroware Ind. Website <input type="checkbox" class="doneornot"></li>
+                <!-- <li></li> -->
+            </ul>
+        </div>
+    </center>
+    <h1>People in the company</h1>
+    <ol>
+        <li>
+            Arjun Maheshwari - CEO and Founder - 100% Equity
+        </li>
+        <li>
+            No one more :(
+        </li>
+    </ol>
+</body>
+<script src="log.js"></script>
+
+</html>

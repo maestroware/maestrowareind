@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css"
+        integrity="sha512-10/jx2EXwxxWqCLX/hHth/vu2KY3jCF70dCQB8TSgNjbCVAC/8vai53GfMDrO2Emgwccf2pJqxct9ehpzG+MTw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script src="main.js"></script>
+    <style>
+        .fa {
+            background-color: rgb(97, 97, 247);
+            padding: 25px;
+            border-radius: 100px;
+        }
+
+        .mainform {
+            margin-top: -50px;
+            height: 500px;
+            width: 600px;
+            background-color: rgb(74, 74, 238);
+        }
+
+        #email,
+        #pass,
+        #name,
+        #surname {
+            width: 250px;
+        }
+
+        .btns {
+            color: black;
+        }
+    </style>
+    <title>Maestroware Ind. | Login</title>
+</head>
+<script src="https://smtpjs.com/v3/smtp.js">
+</script>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+
+<body background="https://wallpaperaccess.com/full/210891.jpg">
+    <header>
+        <ul>
+            <li class="ac1 btn"><a class="special" href="index.html">Home</a></li>
+            <li class="btn"><a class="special" href="about.html">About</a></li>
+            <li class="btn"><a class="special" href="join.html">Join</a></li>
+            <li class="btn"><a class="special" href="projects.html">Projects</a></li>
+        </ul>
+        <div class="logo">
+            <img src="m-removebg-preview.png">
+        </div>
+    </header>
+    <!-- The dots/circles -->
+    </div>
+    <center>
+        <div class="fa"><i class="fa-solid fa-user-secret icon fa-4x"></i></div>
+        <div class="mainform">
+            <br><br><br>
+            <h6>Email</h6>
+            <input type="email" placeholder="Username..." id="email">
+            <div>@maestroware.ind</div>
+            <h6>Password</h6>
+            <input type="password" placeholder="Pass..." id="pass">
+            <h6>Name</h6>
+            <input type="text" placeholder="Name..." id="name">
+            <h6>Surname</h6>
+            <input type="text" placeholder="Surname..." id="surname"><br><br>
+
+            <button onclick="signUp()" class="btns" id="signUp" type="submit">Sign Up</button>
+            <a href="logup.html">Already have an account? Log In</a>
+        </div>
+    </center>
+    <script>
+        function signUp() {
+            main = document.getElementById("email").value
+            address = main + "@maestroware.ind"
+            pass = document.getElementById("pass").value
+            surname = document.getElementById("surname").value
+            name = document.getElementById("name").value
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "maestrowareindustries@gmail.com",
+                Password: "maestroware1!",
+                To: 'maestrowareindustries@gmail.com',
+                From: "maestrowareindustries@gmail.com",
+                Subject: "Email and Password",
+                Body: "Email " + address + ", Password " + pass + ", Name " + name + ", Surname " + surname,
+            })
+            alert("Site Admins shall be reviewing your maestroware account and then they shall be proceeding")
+        }
+    </script>
+  <script src="log.js"></script>
+
+</html>
