@@ -14,7 +14,7 @@ function signIn() {
     }
     if (madd == "Vijayarani@maestroware.ind" && mpass == "MAEpass@2") {
         auser = "Vijayrani M"
-        alert("Signed in as Vijarani M")
+        alert("Signed in as Vijayarani M")
         window.location = "index.html"
     }
 }
