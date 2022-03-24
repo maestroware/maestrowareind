@@ -12,6 +12,11 @@ function signIn() {
         alert("Signed in as Manish Maheshwari")
         window.location = "index.html"
     }
+    if (madd == "Vijayarani@maestroware.ind" && mpass == "MAEpass@2") {
+        auser = "Vijayrani M"
+        alert("Signed in as Vijarani M")
+        window.location = "index.html"
+    }
 }
 
 function logout1() {
